@@ -1,7 +1,7 @@
 import unittest
 
 
-class Question2Test(unittest.TestCase):
+class TestQuestion2(unittest.TestCase):
     def test_question_2_where_there_is_only_optimal_route(self):
         max_travel_distance = 7000
 

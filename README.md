@@ -1,6 +1,6 @@
 # About
 
-Annotated solutions to Amazon's AMCAT assessments.
+Annotated solutions to Amazon's AMCAT assessment.
 
 # Layout
 

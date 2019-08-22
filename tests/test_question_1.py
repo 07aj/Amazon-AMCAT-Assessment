@@ -1,6 +1,7 @@
 import unittest
 
-class Question1Test(unittest.TestCase):
+
+class TestQuestion1(unittest.TestCase):
     def test_question_1():
         num_orders = 6
         orderList = [["zld 93 12"],
