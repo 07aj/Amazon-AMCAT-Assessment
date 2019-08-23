@@ -1,5 +1,5 @@
-import fractions
 import functools
+import math
 
 
 def gcd(num: int, arr: list) -> int:
@@ -8,4 +8,4 @@ def gcd(num: int, arr: list) -> int:
     :param arr: The array of elements over which you want to find the GCD of.
     :return: The GCD.
     """
-    return functools.reduce(fractions.gcd, arr)
+    return functools.reduce(math.gcd, arr)

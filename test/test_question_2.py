@@ -1,18 +1,19 @@
 import unittest
+
 import src.question_2
+
 
 class TestQuestion2(unittest.TestCase):
     def test_question_2_where_there_is_only_optimal_route(self):
         max_travel_distance = 7000
 
-        forwardRouteList = [[1,2000],
-                            [2,4000],
-                            [3,6000]]
+        forwardRouteList = [[1, 2000],
+                            [2, 4000],
+                            [3, 6000]]
 
         returnRouteList = [[1, 2000]]
-    
 
-        output = [[2,1]]
+        output = [[2, 1]]
 
         self.assertEqual(src.question_2.optimalUtilization(max_travel_distance, forwardRouteList, returnRouteList),
                          output)
@@ -23,17 +24,17 @@ class TestQuestion2(unittest.TestCase):
     def test_question_2_where_there_are_more_than_one_optimal_route(self):
         max_travel_distance = 10000
 
-        forwardRouteList = [[1,3000],
-                        [2,5000],
-                        [3,7000],
-                        [4,10000]]
+        forwardRouteList = [[1, 3000],
+                            [2, 5000],
+                            [3, 7000],
+                            [4, 10000]]
 
         returnRouteList = [[1, 2000],
                            [2, 3000],
                            [3, 4000],
                            [4, 5000]]
 
-        output = [[2,4], [3,2]]
+        output = [[2, 4], [3, 2]]
 
         self.assertCountEqual(src.question_2.optimalUtilization(max_travel_distance, forwardRouteList, returnRouteList),
                               output)
@@ -46,5 +47,3 @@ class TestQuestion2(unittest.TestCase):
         # 3000 miles travelled. These also add up to 10000 miles travelled.
         # Therefore, the pairs of forward and return routes that optimally utilize the aircraft
         # are [2,4] and [3,2].
-        
-

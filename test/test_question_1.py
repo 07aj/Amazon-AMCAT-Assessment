@@ -1,5 +1,7 @@
 import unittest
+
 import src.question_1
+
 
 class TestQuestion1(unittest.TestCase):
     def test_question_1(self):
