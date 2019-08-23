@@ -1,5 +1,5 @@
 import unittest
-
+import src.question_2
 
 class TestQuestion2(unittest.TestCase):
     def test_question_2_where_there_is_only_optimal_route(self):
@@ -9,15 +9,13 @@ class TestQuestion2(unittest.TestCase):
                             [2,4000],
                             [3,6000]]
 
-        returnRouteList = [[1, 2000],
-                        [2, 3000],
-                        [3, 4000],
-                        [4, 5000]]
+        returnRouteList = [[1, 2000]]
     
 
         output = [[2,1]]
 
-        self.assertEqual(question_2(max_travel_distance, forwardRouteList, returnRouteList), output)
+        self.assertEqual(src.question_2.optimalUtilization(max_travel_distance, forwardRouteList, returnRouteList),
+                         output)
         ##  Explanation:
         # There are only three combinations which have a total of 4000, 6000, and 8000 miles, respectively.
         # Since 6000 is the largest use that does not exceed 7000, [2,1] is the optimal pair.
@@ -30,11 +28,15 @@ class TestQuestion2(unittest.TestCase):
                         [3,7000],
                         [4,10000]]
 
-        returnRouteList = [[1,2000]]
+        returnRouteList = [[1, 2000],
+                           [2, 3000],
+                           [3, 4000],
+                           [4, 5000]]
 
         output = [[2,4], [3,2]]
 
-        self.assertEqual(question_2(max_travel_distance, forwardRouteList, returnRouteList), output)
+        self.assertCountEqual(src.question_2.optimalUtilization(max_travel_distance, forwardRouteList, returnRouteList),
+                              output)
         ## Explanation
         # There are two pairs of forward and return shipping routes possible that optimally utilizes
         # the given aircraft.
