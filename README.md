@@ -1,3 +1,5 @@
+![build-badge](https://travis-ci.org/raleighlittles/Amazon-AMCAT-Assessment.svg?branch=master)
+
 # About
 
 Annotated solutions to Amazon's AMCAT assessment.
@@ -8,4 +10,4 @@ Annotated solutions to Amazon's AMCAT assessment.
 
 * `src/` : The associated code for each question.
 
-* `tests/` : Tests for the code based on the supplied example input and expected output. Note that question 4 is missing tests.
+* `test/` : Tests for the code based on the supplied example input and expected output.
